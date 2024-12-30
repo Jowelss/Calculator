@@ -1,21 +1,49 @@
 const num = document.querySelectorAll('.num');
+const sign = document.querySelectorAll('.sign');
+
 const show = document.getElementById('show');
-const sumar = document.getElementById('sumar');
 
-const arr = [];
+const eliminate = document.getElementById('eliminate');
+const addition = document.getElementById('addition');
+const equal = document.getElementById('equal');
 
-function getNumber() {
-  const arrNum = Array.from(num);
+function calcularm() {
+  equal.addEventListener('click', () => {
+    const signIndex = show.textContent.indexOf('+');
 
-  arrNum.forEach((item) => {
-    item.addEventListener('click', () => {
-      arr.push(item.textContent);
+    const numOne = show.textContent.substring(0, signIndex);
+    const numTwo = show.textContent.substring(signIndex + 1);
 
-      show.value = arr.join('');
+    const result = parseFloat(numOne) + parseFloat(numTwo);
 
-      arr.join('');
+    show.textContent = result;
+  });
+}
+
+calcularm();
+
+function sumar() {
+  addition.addEventListener('click', () => {
+    show.textContent += '+';
+  });
+}
+
+sumar();
+
+function deleteNum() {
+  eliminate.addEventListener('click', () => {
+    show.textContent = show.textContent.slice(0, -1);
+  });
+}
+
+deleteNum();
+
+function clickNums() {
+  num.forEach((label) => {
+    label.addEventListener('click', () => {
+      show.textContent += label.textContent;
     });
   });
 }
 
-getNumber();
+clickNums();
