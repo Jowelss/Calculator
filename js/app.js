@@ -1,33 +1,15 @@
-const sign = document.querySelectorAll('.sign');
 const num = document.querySelectorAll('.num');
 const show = document.getElementById('show');
 
-const data = [];
+const arr = [];
 
-function addNum() {
-  num.forEach((item) => {
-    item.addEventListener('click', () => {
-      data.push(item.textContent);
-    });
-  });
-}
+const operator = {
+  sumar: '+',
+  restar: '-',
+  dividir: '/',
+  multiplicar: '*',
+};
 
-addNum();
-
-function addSign() {
-  sign.forEach((item) => {
-    item.addEventListener('click', () => {
-      data.push(item.textContent);
-    });
-  });
-}
-
-addSign();
-
-function sumar() {}
-
-function restar(params) {}
-
-function dividir(params) {}
-
-function multiplicar(params) {}
+num.forEach((item) => {
+  item.addEventListener('click', () => {});
+});
