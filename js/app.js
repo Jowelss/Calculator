@@ -1,15 +1,35 @@
-const num = document.querySelectorAll('.num');
 const show = document.getElementById('show');
+const button = document.querySelectorAll('.button');
 
-const arr = [];
+const num = [];
 
-const operator = {
-  sumar: '+',
-  restar: '-',
-  dividir: '/',
-  multiplicar: '*',
+const calcular = () => {
+  console.log(typeof num);
 };
 
-num.forEach((item) => {
-  item.addEventListener('click', () => {});
-});
+const clickButton = () => {
+  const operator = {
+    sumar: '+',
+    restar: '-',
+    multiplicar: '*',
+    dividir: '/',
+  };
+
+  button.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (operator[item.textContent]) {
+        num.push(operator[item.textContent]);
+
+        show.textContent += operator[item.textContent];
+      } else {
+        num.push(parseFloat(item.textContent));
+
+        show.textContent += item.textContent;
+      }
+
+      calcular();
+    });
+  });
+};
+
+clickButton();
