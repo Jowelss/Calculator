@@ -1,35 +1,31 @@
 const show = document.getElementById('show');
-const button = document.querySelectorAll('.button');
+const buttoNum = document.querySelectorAll('.button-num');
+const buttonOperator = document.querySelectorAll('.button-operator');
 
-const num = [];
-
-const calcular = () => {
-  console.log(typeof num);
+const operation = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+  '/': (a, b) => a / b,
 };
 
-const clickButton = () => {
-  const operator = {
-    sumar: '+',
-    restar: '-',
-    multiplicar: '*',
-    dividir: '/',
-  };
+const symbols = {
+  sumar: '+',
+  restar: '-',
+  multiplicar: '*',
+  dividir: '/',
+};
 
-  button.forEach((item) => {
-    item.addEventListener('click', () => {
-      if (operator[item.textContent]) {
-        num.push(operator[item.textContent]);
+const arrContent = [];
 
-        show.textContent += operator[item.textContent];
-      } else {
-        num.push(parseFloat(item.textContent));
-
-        show.textContent += item.textContent;
-      }
-
-      calcular();
-    });
+buttoNum.forEach((num) => {
+  num.addEventListener('click', () => {
+    arrContent.push(num.textContent);
   });
-};
+});
 
-clickButton();
+buttonOperator.forEach((op) => {
+  op.addEventListener('click', () => {
+    arrContent.push(symbols[op.textContent]);
+  });
+});
