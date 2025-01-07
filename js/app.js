@@ -1,14 +1,3 @@
-const show = document.getElementById('show');
-const buttoNum = document.querySelectorAll('.button-num');
-const buttonOperator = document.querySelectorAll('.button-operator');
-
-const operation = {
-  '+': (a, b) => a + b,
-  '-': (a, b) => a - b,
-  '*': (a, b) => a * b,
-  '/': (a, b) => a / b,
-};
-
 const symbols = {
   sumar: '+',
   restar: '-',
@@ -16,16 +5,26 @@ const symbols = {
   dividir: '/',
 };
 
-const arrContent = [];
+const arr = [];
 
-buttoNum.forEach((num) => {
-  num.addEventListener('click', () => {
-    arrContent.push(num.textContent);
-  });
+const main = document.getElementById('main');
+
+main.addEventListener('click', (e) => {
+  if (e.target.matches('.button-operator')) {
+    num(symbols[e.target.childNodes[0].textContent]);
+  } else if (e.target.matches('.button-num')) {
+    num(e.target.childNodes[0].textContent);
+  }
 });
 
-buttonOperator.forEach((op) => {
-  op.addEventListener('click', () => {
-    arrContent.push(symbols[op.textContent]);
-  });
-});
+function num(item) {
+  const a = arr.join('');
+
+  if (item !== '+') {
+    arr.push(item);
+
+    console.log(a);
+
+    console.log(arr);
+  }
+}
