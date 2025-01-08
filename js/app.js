@@ -5,26 +5,43 @@ const symbols = {
   dividir: '/',
 };
 
-const arr = [];
-
 const main = document.getElementById('main');
 
+const obj = {
+  numOne: '',
+  numTwo: '',
+  sign: '',
+};
+
 main.addEventListener('click', (e) => {
-  if (e.target.matches('.button-operator')) {
-    num(symbols[e.target.childNodes[0].textContent]);
-  } else if (e.target.matches('.button-num')) {
-    num(e.target.childNodes[0].textContent);
+  if (e.target.matches('.button-num') && obj.sign < 1) {
+    obj.numOne += e.target.textContent;
   }
+
+  if (e.target.matches('.button-operator')) {
+    obj.sign = symbols[e.target.textContent];
+  }
+
+  if (e.target.matches('.button-num') && obj.sign.length > 0) {
+    obj.numTwo += e.target.textContent;
+  }
+
+  convertToNum();
 });
 
-function num(item) {
-  const a = arr.join('');
+function convertToNum() {
+  if (obj.sign === '+') {
+    let coso = parseFloat(obj.numOne) + parseFloat(obj.numTwo);
+    console.log(coso);
 
-  if (item !== '+') {
-    arr.push(item);
+    console.log(obj);
+  }
 
-    console.log(a);
+  if (obj.sign === '-') {
+    let coso = parseFloat(obj.numOne) - parseFloat(obj.numTwo);
 
-    console.log(arr);
+    console.log(coso);
+
+    console.log(obj);
   }
 }
