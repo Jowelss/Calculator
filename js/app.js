@@ -7,41 +7,34 @@ const symbols = {
 
 const main = document.getElementById('main');
 
-const obj = {
-  numOne: '',
-  numTwo: '',
-  sign: '',
-};
+let result = 0;
+
+let operator = null;
+
+function calculate(e) {
+  if (!isNaN(e)) {
+    const number = (result = parseFloat(e));
+
+    if (operator === '+') {
+      result += number;
+      console.log(result);
+      // space
+    } else if (operator === '-') {
+      result -= number;
+
+      // space
+    }
+  } else if (isNaN(e)) {
+    operator = e;
+  }
+}
 
 main.addEventListener('click', (e) => {
-  if (e.target.matches('.button-num') && obj.sign < 1) {
-    obj.numOne += e.target.textContent;
+  if (e.target.matches('.button-num')) {
+    return calculate(e.target.textContent);
   }
 
   if (e.target.matches('.button-operator')) {
-    obj.sign = symbols[e.target.textContent];
+    return calculate(symbols[e.target.id]);
   }
-
-  if (e.target.matches('.button-num') && obj.sign.length > 0) {
-    obj.numTwo += e.target.textContent;
-  }
-
-  convertToNum();
 });
-
-function convertToNum() {
-  if (obj.sign === '+') {
-    let coso = parseFloat(obj.numOne) + parseFloat(obj.numTwo);
-    console.log(coso);
-
-    console.log(obj);
-  }
-
-  if (obj.sign === '-') {
-    let coso = parseFloat(obj.numOne) - parseFloat(obj.numTwo);
-
-    console.log(coso);
-
-    console.log(obj);
-  }
-}
