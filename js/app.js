@@ -3,6 +3,7 @@ const symbols = {
   restar: '-',
   multiplicar: '*',
   dividir: '/',
+  igual: '=',
 };
 
 const main = document.getElementById('main');
@@ -11,20 +12,24 @@ let result = 0;
 
 let operator = null;
 
+let stringNum = '';
+
 function calculate(e) {
   if (!isNaN(e)) {
-    const number = (result = parseFloat(e));
+    stringNum += e;
+    const pero = parseFloat(stringNum);
 
-    if (operator === '+') {
-      result += number;
-      console.log(result);
-      // space
-    } else if (operator === '-') {
-      result -= number;
+    if (operator === '+') result += pero;
 
-      // space
-    }
-  } else if (isNaN(e)) {
+    if (operator === '-') result -= number;
+
+    if (operator === '*') result *= number;
+
+    if (operator === '/') result /= number;
+
+    console.log(result);
+    console.log(stringNum);
+  } else {
     operator = e;
   }
 }
