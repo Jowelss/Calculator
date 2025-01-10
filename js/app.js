@@ -8,30 +8,12 @@ const symbols = {
 
 const main = document.getElementById('main');
 
-let result = 0;
+let result = '';
 
 let operator = null;
 
-let stringNum = '';
-
 function calculate(e) {
-  if (!isNaN(e)) {
-    stringNum += e;
-    const pero = parseFloat(stringNum);
-
-    if (operator === '+') result += pero;
-
-    if (operator === '-') result -= number;
-
-    if (operator === '*') result *= number;
-
-    if (operator === '/') result /= number;
-
-    console.log(result);
-    console.log(stringNum);
-  } else {
-    operator = e;
-  }
+  // LA PUTA MADREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 }
 
 main.addEventListener('click', (e) => {
