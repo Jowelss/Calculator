@@ -1,27 +1,31 @@
-const symbols = {
+const calculator = document.getElementById('main');
+const show = document.getElementById('show');
+const showResult = document.getElementById('show-result');
+
+const symbolsOp = {
   sumar: '+',
   restar: '-',
   multiplicar: '*',
   dividir: '/',
-  igual: '=',
+  resultado: '=',
 };
 
-const main = document.getElementById('main');
+const resultArr = [];
 
-let result = '';
-
-let operator = null;
-
-function calculate(e) {
-  // LA PUTA MADREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+function operar(item) {
+  // TOMAR EN CUENTA CAMBIAR EL METODO EVAL POR FUNCIONES QUE REALICEN LAS OPERACIONES QUE EVAL ME AHORRA
+  show.textContent += item;
+  showResult.textContent = eval(show.textContent);
 }
 
-main.addEventListener('click', (e) => {
-  if (e.target.matches('.button-num')) {
-    return calculate(e.target.textContent);
-  }
+calculator.addEventListener('click', (e) => {
+  if (e.target.matches('.number')) {
+    const number = e.target.textContent;
 
-  if (e.target.matches('.button-operator')) {
-    return calculate(symbols[e.target.id]);
+    operar(number);
+  } else if (e.target.matches('.operator')) {
+    const operator = symbolsOp[e.target.id];
+
+    operar(operator);
   }
 });

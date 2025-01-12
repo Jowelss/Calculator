@@ -7,28 +7,31 @@
     <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body>
-    <main id="main">
+    <main id="main" class="select-none">
       <div class="show-container">
-        <span id="show" class="">0</span>
+        <span id="show" class="block"></span>
+        <span id="show-result" class="block"></span>
       </div>
-      <div class="button-num__container select-none">
-        <span class="button-num">1</span>
-        <span class="button-num">2</span>
-        <span class="button-num">3</span>
-        <span class="button-num">4</span>
-        <span class="button-num">5</span>
-        <span class="button-num">6</span>
-        <span class="button-num">7</span>
-        <span class="button-num">8</span>
-        <span class="button-num">9</span>
-        <span class="button-num">0</span>
+
+      <div class="number-container">
+        <span class="number">1</span>
+        <span class="number">2</span>
+        <span class="number">3</span>
+        <span class="number">4</span>
+        <span class="number">5</span>
+        <span class="number">6</span>
+        <span class="number">7</span>
+        <span class="number">8</span>
+        <span class="number">9</span>
+        <span class="number">0</span>
       </div>
-      <div class="button-operator__container select-none">
-        <span class="button-operator" id="sumar">+</span>
-        <span class="button-operator" id="restar">-</span>
-        <span class="button-operator" id="dividir">/</span>
-        <span class="button-operator" id="multiplicar">*</span>
-        <span class="button-operator" id="igual">=</span>
+
+      <div class="operator-container">
+        <span class="operator" id="sumar">mas</span>
+        <span class="operator" id="restar">menos</span>
+        <span class="operator" id="multiplicar">multiplicar</span>
+        <span class="operator" id="dividir">dividir</span>
+        <span class="operator" id="resultado">igual</span>
       </div>
     </main>
     <script src="./js/app.js"></script>
