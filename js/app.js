@@ -9,27 +9,33 @@ const symbolsOp = {
   dividir: '/',
 };
 
-let result = [];
+let result = '';
 
-const indice = 0;
-
-let numbers = '';
+let currentOperation = null;
 
 function operation(e) {
-  if (!isNaN(e)) {
-    numbers += e;
+  if (isNaN(e)) {
+    const number = parseFloat(result);
+
+    if (result !== '') {
+      result = number;
+
+      currentOperation = e;
+
+      performOperation(result, currentOperation);
+    }
+
+    result = '';
   } else {
-    const number = parseFloat(numbers);
-
-    result.push(number, e);
-
-    numbers = '';
+    result += e;
   }
 }
 
-showResult.addEventListener('click', () => {
-  console.log(result);
-});
+function performOperation(item, signo) {
+  if (signo === '+') {
+    console.log(item + 2);
+  }
+}
 
 calculator.addEventListener('click', (e) => {
   if (e.target.matches('.number')) {
