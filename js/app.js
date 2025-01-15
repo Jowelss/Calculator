@@ -1,52 +1,46 @@
 const calculator = document.getElementById('main');
 const show = document.getElementById('show');
-const showResult = document.getElementById('result');
+const showResult = document.getElementById('show-result');
+const error = document.getElementById('error');
 
-const symbolsOp = {
+const symbolOperator = {
   sumar: '+',
   restar: '-',
   multiplicar: '*',
   dividir: '/',
 };
 
-let result = '';
-
-let currentOperation = null;
-
-function operation(e) {
-  if (isNaN(e)) {
-    const number = parseFloat(result);
-
-    if (result !== '') {
-      result = number;
-
-      currentOperation = e;
-
-      performOperation(result, currentOperation);
-    }
-
-    result = '';
-  } else {
-    result += e;
-  }
-}
-
-function performOperation(item, signo) {
-  if (signo === '+') {
-    console.log(item + 2);
-  }
-}
-
 calculator.addEventListener('click', (e) => {
+  if (e.target.id === 'delete' && show.textContent.length > 0) {
+    show.textContent = show.textContent.slice(0, -1);
+  }
+
+  if (e.target.id === 'result') {
+    const valueNull = show.textContent.slice(-1);
+
+    if (isNaN(valueNull)) {
+      error.style.display = 'block';
+    } else {
+      showResult.textContent = eval(show.textContent);
+    }
+  }
+
   if (e.target.matches('.number')) {
     const number = e.target.textContent;
 
-    operation(number);
+    show.textContent += number;
+
+    error.style.display = 'none';
   }
 
   if (e.target.matches('.operator')) {
-    const operator = symbolsOp[e.target.id];
+    const operator = symbolOperator[e.target.id];
 
-    operation(operator);
+    const num = show.textContent.slice(-1);
+
+    // ESTO IF LO HICE DE SUERTE ASI QUE OJITO
+    if (!isNaN(num)) {
+      show.textContent += operator;
+    }
   }
 });
