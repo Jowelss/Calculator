@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/f99041913b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="flex justify-center items-center min-h-svh">
+    <main id="main" class="select-none cursor-pointer m-2 p-2 border">
+      <div class="show-container grid grid-cols-[1fr_40px_80px]">
+        <div id="show" class="h-[30px]"></div>
+
+        <span class="fa-solid fa-equals" id="result"></span>
+
+        <div id="show-result"></div>
+
+        <!-- <span class="hidden" id="error">Te falta agregar un valor númerico</span> -->
+      </div>
+
+      <div class="grid grid-cols-[1fr_80px]">
+        <div
+          class="number-container grid grid-cols-[repeat(3,_80px)] grid-rows-[repeat(4,_80px)] items-center justify-items-center"
+        >
+          <span class="number">1</span>
+          <span class="number">2</span>
+          <span class="number">3</span>
+          <span class="number">4</span>
+          <span class="number">5</span>
+          <span class="number">6</span>
+          <span class="number">7</span>
+          <span class="number">8</span>
+          <span class="number">9</span>
+          <span class="number">.</span>
+          <span class="number">0</span>
+          <span id="delete">borrar</span>
+        </div>
+
+        <div
+          class="operator-container grid grid-cols-[repeat(1,_80px)] grid-rows-[repeat(4,_80px)] items-center justify-items-center"
+        >
+          <span class="operator fa-solid fa-plus" id="sumar"></span>
+
+          <span class="operator fa-solid fa-window-minimize" id="restar"></span>
+
+          <span class="operator fa-solid fa-xmark" id="multiplicar"></span>
+
+          <span class="operator fa-solid fa-divide" id="dividir"></span>
+        </div>
+      </div>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
