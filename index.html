@@ -10,22 +10,20 @@
     ></script>
   </head>
 
-  <body class="flex justify-center items-center min-h-svh">
-    <main id="main" class="select-none cursor-pointer m-2 p-2 border">
-      <div class="show-container grid grid-cols-[1fr_40px_80px]">
-        <div id="show" class="h-[30px]"></div>
+  <body>
+    <main id="main">
+      <div class="show-container">
+        <div id="show"></div>
 
-        <span class="fa-solid fa-equals" id="result"></span>
+        <span id="result"></span>
 
         <div id="show-result"></div>
 
-        <!-- <span class="hidden" id="error">Te falta agregar un valor númerico</span> -->
+        <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
-      <div class="grid grid-cols-[1fr_80px]">
-        <div
-          class="number-container grid grid-cols-[repeat(3,_80px)] grid-rows-[repeat(4,_80px)] items-center justify-items-center"
-        >
+      <div>
+        <div class="number-container">
           <span class="number">1</span>
           <span class="number">2</span>
           <span class="number">3</span>
@@ -40,16 +38,14 @@
           <span id="delete">borrar</span>
         </div>
 
-        <div
-          class="operator-container grid grid-cols-[repeat(1,_80px)] grid-rows-[repeat(4,_80px)] items-center justify-items-center"
-        >
-          <span class="operator fa-solid fa-plus" id="sumar"></span>
+        <div class="operator-container">
+          <span class="operator" id="sumar"></span>
 
-          <span class="operator fa-solid fa-window-minimize" id="restar"></span>
+          <span class="operator" id="restar"></span>
 
-          <span class="operator fa-solid fa-xmark" id="multiplicar"></span>
+          <span class="operator" id="multiplicar"></span>
 
-          <span class="operator fa-solid fa-divide" id="dividir"></span>
+          <span class="operator" id="dividir"></span>
         </div>
       </div>
     </main>
