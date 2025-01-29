@@ -11,9 +11,9 @@
     ></script>
   </head>
 
-  <body>
+  <body class="h-[100vh] flex justify-center items-center">
     <main id="main">
-      <div class="show-container">
+      <div class="show-container w-[100%] flex justify-between">
         <div id="show"></div>
 
         <span class="fa-solid fa-equals" id="result"></span>
@@ -23,23 +23,23 @@
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
-      <div>
-        <div class="number-container">
-          <span class="number">1</span>
-          <span class="number">2</span>
-          <span class="number">3</span>
-          <span class="number">4</span>
-          <span class="number">5</span>
-          <span class="number">6</span>
-          <span class="number">7</span>
-          <span class="number">8</span>
-          <span class="number">9</span>
-          <span class="number">.</span>
-          <span class="number">0</span>
+      <div class="grid grid-cols-2">
+        <div class="number-container grid grid-cols-3">
+          <span class="number px-[30px] py-[20px]">1</span>
+          <span class="number px-[30px] py-[20px]">2</span>
+          <span class="number px-[30px] py-[20px]">3</span>
+          <span class="number px-[30px] py-[20px]">4</span>
+          <span class="number px-[30px] py-[20px]">5</span>
+          <span class="number px-[30px] py-[20px]">6</span>
+          <span class="number px-[30px] py-[20px]">7</span>
+          <span class="number px-[30px] py-[20px]">8</span>
+          <span class="number px-[30px] py-[20px]">9</span>
+          <span class="number px-[30px] py-[20px]">.</span>
+          <span class="number px-[30px] py-[20px]">0</span>
           <span id="delete">borrar</span>
         </div>
 
-        <div class="operator-container">
+        <div class="operator-container grid grid-colum-1">
           <span class="operator fa-solid fa-plus id" id="sumar"></span>
 
           <span class="operator fa-solid fa-minus" id="restar"></span>
