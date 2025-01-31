@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
     <link href="./css/output.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/f99041913b.js"
@@ -11,9 +11,9 @@
     ></script>
   </head>
 
-  <body class="h-[100vh] flex justify-center items-center">
-    <main id="main">
-      <div class="show-container w-[100%] flex justify-between">
+  <body class="h-screen flex justify-center items-center">
+    <main id="main" class="h-[300px]">
+      <div class="show-container">
         <div id="show"></div>
 
         <span class="fa-solid fa-equals" id="result"></span>
@@ -23,7 +23,7 @@
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-[200px_100px] h-full">
         <div class="number-container grid grid-cols-3">
           <span class="number">1</span>
           <span class="number">2</span>
@@ -39,8 +39,10 @@
           <span id="delete">borrar</span>
         </div>
 
-        <div class="operator-container grid grid-colum-1">
-          <span class="operator fa-solid fa-plus id" id="sumar"></span>
+        <div
+          class="operator-container grid grid-cols-1 items-center justify-items-center"
+        >
+          <span class="operator fa-solid fa-plus" id="sumar"></span>
 
           <span class="operator fa-solid fa-minus" id="restar"></span>
 
