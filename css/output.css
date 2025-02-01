@@ -527,12 +527,6 @@
   .relative {
     position: relative;
   }
-  .col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-  .col-span-2 {
-    grid-column: span 2 / span 2;
-  }
   .block {
     display: block;
   }
@@ -554,23 +548,14 @@
   .h-\[300px\] {
     height: 300px;
   }
-  .h-\[600px\] {
-    height: 600px;
+  .h-\[400px\] {
+    height: 400px;
   }
   .h-full {
     height: 100%;
   }
   .h-screen {
     height: 100vh;
-  }
-  .w-\[300px\] {
-    width: 300px;
-  }
-  .w-\[400px\] {
-    width: 400px;
-  }
-  .w-\[500px\] {
-    width: 500px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -590,17 +575,26 @@
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .grid-cols-\[200px\,_100px\] {
-    grid-template-columns: 200px, 100px;
+  .grid-cols-\[3\,_300px\] {
+    grid-template-columns: 3, 300px;
+  }
+  .grid-cols-\[60px_60px_60px\] {
+    grid-template-columns: 60px 60px 60px;
+  }
+  .grid-cols-\[100px_100px_100px\] {
+    grid-template-columns: 100px 100px 100px;
+  }
+  .grid-cols-\[300px\] {
+    grid-template-columns: 300px;
+  }
+  .grid-cols-\[3_300px\] {
+    grid-template-columns: 3 300px;
   }
   .grid-cols-\[200px_100px\] {
     grid-template-columns: 200px 100px;
   }
-  .grid-cols-\[300px\,_100px\] {
-    grid-template-columns: 300px, 100px;
-  }
-  .grid-rows-4 {
-    grid-template-rows: repeat(4, minmax(0, 1fr));
+  .content-around {
+    align-content: space-around;
   }
   .content-center {
     align-content: center;
@@ -618,27 +612,8 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-solid {
-    --tw-border-style: solid;
-    border-style: solid;
-  }
-  .px-\[20px\] {
-    padding-inline: 20px;
-  }
-  .px-\[30px\] {
-    padding-inline: 30px;
-  }
-  .py-\[10px\] {
-    padding-block: 10px;
-  }
-  .py-\[20px\] {
-    padding-block: 20px;
-  }
-  .py-\[30px20px\] {
-    padding-block: 30px20px;
-  }
-  .py-\[30px\] {
-    padding-block: 30px;
+  .p-\[20px\] {
+    padding: 20px;
   }
   .underline {
     text-decoration-line: underline;
