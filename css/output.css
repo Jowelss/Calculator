@@ -545,17 +545,14 @@
   .table {
     display: table;
   }
-  .h-\[300px\] {
-    height: 300px;
-  }
-  .h-\[400px\] {
-    height: 400px;
-  }
   .h-full {
     height: 100%;
   }
   .h-screen {
     height: 100vh;
+  }
+  .w-max {
+    width: max-content;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -572,32 +569,53 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .grid-cols-\[1fr\,_68px\] {
+    grid-template-columns: 1fr, 68px;
   }
-  .grid-cols-\[3\,_300px\] {
-    grid-template-columns: 3, 300px;
+  .grid-cols-\[1fr_68px\] {
+    grid-template-columns: 1fr 68px;
+  }
+  .grid-cols-\[1fr_80px\] {
+    grid-template-columns: 1fr 80px;
+  }
+  .grid-cols-\[3\,60px\] {
+    grid-template-columns: 3,60px;
+  }
+  .grid-cols-\[3\,_60px\] {
+    grid-template-columns: 3, 60px;
+  }
+  .grid-cols-\[3\,__60px\] {
+    grid-template-columns: 3,  60px;
+  }
+  .grid-cols-\[3_\,60px\] {
+    grid-template-columns: 3 ,60px;
+  }
+  .grid-cols-\[3_60px\] {
+    grid-template-columns: 3 60px;
   }
   .grid-cols-\[60px_60px_60px\] {
     grid-template-columns: 60px 60px 60px;
   }
-  .grid-cols-\[100px_100px_100px\] {
-    grid-template-columns: 100px 100px 100px;
+  .grid-cols-\[68px_68px_68px\] {
+    grid-template-columns: 68px 68px 68px;
   }
-  .grid-cols-\[300px\] {
-    grid-template-columns: 300px;
+  .grid-cols-\[80px_80px_80px\] {
+    grid-template-columns: 80px 80px 80px;
   }
-  .grid-cols-\[3_300px\] {
-    grid-template-columns: 3 300px;
+  .grid-rows-\[\(4\,68px\)\] {
+    grid-template-rows: (4,68px);
   }
-  .grid-cols-\[200px_100px\] {
-    grid-template-columns: 200px 100px;
+  .grid-rows-\[\(4\,_68px\)\] {
+    grid-template-rows: (4, 68px);
   }
-  .content-around {
-    align-content: space-around;
+  .grid-rows-\[68px_68px_68px\] {
+    grid-template-rows: 68px 68px 68px;
   }
-  .content-center {
-    align-content: center;
+  .grid-rows-\[68px_68px_68px_68px\] {
+    grid-template-rows: 68px 68px 68px 68px;
+  }
+  .grid-rows-\[80px_80px_80px_80px\] {
+    grid-template-rows: 80px 80px 80px 80px;
   }
   .items-center {
     align-items: center;
@@ -611,9 +629,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .p-\[20px\] {
-    padding: 20px;
   }
   .underline {
     text-decoration-line: underline;
