@@ -12,8 +12,10 @@
   </head>
 
   <body class="h-screen flex justify-center items-center">
-    <main id="main">
-      <div class="show-container">
+    <main id="main" class="text-2xl">
+      <div
+        class="show-container flex justify-between items-center h-[48px] border"
+      >
         <div id="show"></div>
 
         <span class="fa-solid fa-equals" id="result"></span>
@@ -23,9 +25,9 @@
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
-      <div class="grid grid-cols-[1fr_80px] h-full">
+      <div class="grid grid-cols-[1fr_100px] h-full">
         <div
-          class="number-container grid grid-rows-[80px_80px_80px_80px] grid-cols-[80px_80px_80px] items-center justify-items-center"
+          class="number-container grid grid-rows-[100px_100px_100px_100px] grid-cols-[100px_100px_100px] items-center justify-items-center border"
         >
           <span class="number">1</span>
           <span class="number">2</span>
@@ -38,11 +40,11 @@
           <span class="number">9</span>
           <span class="number">.</span>
           <span class="number">0</span>
-          <span id="delete">borrar</span>
+          <span id="delete" class="fa-solid fa-delete-left"></span>
         </div>
 
         <div
-          class="operator-container grid grid-cols-1 items-center justify-items-center"
+          class="operator-container grid grid-cols-1 items-center justify-items-center border"
         >
           <span class="operator fa-solid fa-plus" id="sumar"></span>
 
