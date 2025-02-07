@@ -527,15 +527,6 @@
   .relative {
     position: relative;
   }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
-  }
-  .mr-auto {
-    margin-right: auto;
-  }
   .block {
     display: block;
   }
@@ -563,8 +554,17 @@
   .h-screen {
     height: 100vh;
   }
+  .w-\[100px\] {
+    width: 100px;
+  }
   .w-full {
     width: 100%;
+  }
+  .min-w-\[100px\] {
+    min-width: 100px;
+  }
+  .min-w-\[200px\] {
+    min-width: 200px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -602,9 +602,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .text-center {
-    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
