@@ -14,33 +14,36 @@
   <body class="h-screen flex justify-center items-center">
     <main id="main" class="text-2xl">
       <div
-        class="show-container flex justify-between items-center h-[48px] border"
+        class="show-container flex justify-around items-center h-[48px] border"
       >
-        <div class="min-w-[200px] h-full" id="show"></div>
+        <div class="min-w-[200px]" id="show"></div>
 
         <span class="fa-solid fa-equals" id="result"></span>
 
-        <div id="show-result" class="min-w-[160px] h-full"></div>
+        <div id="show-result" class="min-w-[160px] text-end"></div>
 
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
       <div class="grid grid-cols-[1fr_100px] h-full">
         <div
-          class="number-container grid grid-rows-[100px_100px_100px_100px] grid-cols-[100px_100px_100px] justify-items-center items-center gap-1.5 border"
+          class="number-container grid grid-rows-4 grid-cols-3 justify-items-center items-center border"
         >
-          <span class="number py-[34px] px-[42px]">1</span>
-          <span class="number">2</span>
-          <span class="number">3</span>
-          <span class="number">4</span>
-          <span class="number">5</span>
-          <span class="number">6</span>
-          <span class="number">7</span>
-          <span class="number">8</span>
-          <span class="number">9</span>
-          <span class="number">.</span>
-          <span class="number">0</span>
-          <span id="delete" class="fa-solid fa-delete-left"></span>
+          <span class="number py-[28px] px-[38px] border">1</span>
+          <span class="number py-[28px] px-[38px] border">2</span>
+          <span class="number py-[28px] px-[38px] border">3</span>
+          <span class="number py-[28px] px-[38px] border">4</span>
+          <span class="number py-[28px] px-[38px] border">5</span>
+          <span class="number py-[28px] px-[38px] border">6</span>
+          <span class="number py-[28px] px-[38px] border">7</span>
+          <span class="number py-[28px] px-[38px] border">8</span>
+          <span class="number py-[28px] px-[38px] border">9</span>
+          <span class="number py-[28px] px-[38px] border">.</span>
+          <span class="number py-[28px] px-[38px] border">0</span>
+          <span
+            id="delete"
+            class="fa-solid fa-delete-left py-[30px] px-[34px] border"
+          ></span>
         </div>
 
         <div

@@ -527,6 +527,12 @@
   .relative {
     position: relative;
   }
+  .m-\[40px\] {
+    margin: 40px;
+  }
+  .m-\[auto_0\] {
+    margin: auto 0;
+  }
   .block {
     display: block;
   }
@@ -548,8 +554,8 @@
   .h-\[48px\] {
     height: 48px;
   }
-  .h-fit {
-    height: fit-content;
+  .h-\[100px\] {
+    height: 100px;
   }
   .h-full {
     height: 100%;
@@ -557,11 +563,8 @@
   .h-screen {
     height: 100vh;
   }
-  .w-\[100\%\] {
-    width: 100%;
-  }
-  .w-full {
-    width: 100%;
+  .min-h-\[100px\] {
+    min-height: 100px;
   }
   .min-w-\[100px\] {
     min-width: 100px;
@@ -584,17 +587,26 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .grid-cols-\[100px_100px_100px\] {
     grid-template-columns: 100px 100px 100px;
   }
   .grid-cols-\[1fr_100px\] {
     grid-template-columns: 1fr 100px;
   }
+  .grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
   .grid-rows-\[100px_100px_100px_100px\] {
     grid-template-rows: 100px 100px 100px 100px;
   }
   .items-center {
     align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
   }
   .justify-between {
     justify-content: space-between;
@@ -611,42 +623,48 @@
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
   }
-  .gap-\[10px\] {
-    gap: 10px;
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .p-\[20px\] {
-    padding: 20px;
+  .p-\[auto_0\] {
+    padding: auto 0;
   }
-  .p-\[30px\] {
-    padding: 30px;
+  .px-\[24px\] {
+    padding-inline: 24px;
   }
-  .p-\[40px\] {
-    padding: 40px;
+  .px-\[30px\] {
+    padding-inline: 30px;
   }
-  .p-\[100\%\] {
-    padding: 100%;
+  .px-\[34px\] {
+    padding-inline: 34px;
+  }
+  .px-\[38px\] {
+    padding-inline: 38px;
+  }
+  .px-\[40px\] {
+    padding-inline: 40px;
   }
   .px-\[42px\] {
     padding-inline: 42px;
   }
-  .px-\[43px\] {
-    padding-inline: 43px;
+  .py-\[20px\] {
+    padding-block: 20px;
+  }
+  .py-\[28px\] {
+    padding-block: 28px;
+  }
+  .py-\[30px\] {
+    padding-block: 30px;
   }
   .py-\[34px\] {
     padding-block: 34px;
   }
-  .py-\[38px\] {
-    padding-block: 38px;
-  }
-  .py-\[40px\] {
-    padding-block: 40px;
-  }
   .text-center {
     text-align: center;
+  }
+  .text-end {
+    text-align: end;
   }
   .text-2xl {
     font-size: var(--text-2xl);
