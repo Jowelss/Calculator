@@ -14,41 +14,36 @@
   <body class="h-screen flex justify-center items-center">
     <main id="main" class="text-2xl">
       <div
-        class="show-container flex justify-around items-center h-[48px] border"
+        class="show-container flex justify-around items-center h-[48px] border mb-0.5"
       >
-        <div class="min-w-[200px]" id="show"></div>
+        <div class="min-w-[200px] max-w-[200px]" id="show"></div>
 
-        <span class="fa-solid fa-equals" id="result"></span>
+        <span class="fa-solid fa-equals cursor-pointer" id="result"></span>
 
-        <div id="show-result" class="min-w-[160px] text-end"></div>
+        <div id="show-result" class="min-w-[97px] max-w-[97px] text-end"></div>
 
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
-      <div class="grid grid-cols-[1fr_100px] h-full">
+      <div class="flex gap-0.5 text-center">
         <div
-          class="number-container grid grid-cols-3 justify-items-center items-center border"
+          class="number-container grid grid-cols-[100px_100px_100px] grid-rows-[100px_100px_100px_100px] gap-0.5"
         >
-          <span class="number py-[28px] px-[38px] border">1</span>
-          <span class="number py-[28px] px-[38px] border">2</span>
-          <span class="number py-[28px] px-[38px] border">3</span>
-          <span class="number py-[28px] px-[38px] border">4</span>
-          <span class="number py-[28px] px-[38px] border">5</span>
-          <span class="number py-[28px] px-[38px] border">6</span>
-          <span class="number py-[28px] px-[38px] border">7</span>
-          <span class="number py-[28px] px-[38px] border">8</span>
-          <span class="number py-[28px] px-[38px] border">9</span>
-          <span class="number py-[28px] px-[38px] border">.</span>
-          <span class="number py-[28px] px-[38px] border">0</span>
-          <span
-            id="delete"
-            class="fa-solid fa-delete-left py-[30px] px-[34px] border"
-          ></span>
+          <span class="number">1</span>
+          <span class="number">2</span>
+          <span class="number">3</span>
+          <span class="number">4</span>
+          <span class="number">5</span>
+          <span class="number">6</span>
+          <span class="number">7</span>
+          <span class="number">8</span>
+          <span class="number">9</span>
+          <span class="number">.</span>
+          <span class="number">0</span>
+          <span id="delete" class="number fa-solid fa-delete-left"></span>
         </div>
 
-        <div
-          class="operator-container grid grid-cols-1 items-center justify-items-center border"
-        >
+        <div class="operator-container grid grid-cols-[100px] gap-0.5">
           <span class="operator fa-solid fa-plus" id="sumar"></span>
 
           <span class="operator fa-solid fa-minus" id="restar"></span>
