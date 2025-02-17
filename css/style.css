@@ -2,5 +2,5 @@
 
 .number,
 .operator {
-  @apply place-content-center border cursor-pointer select-none;
+  @apply place-content-center border cursor-pointer select-none active:scale-98 duration-200;
 }
