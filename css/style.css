@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.number,
+.operator {
+  @apply place-content-center border cursor-pointer select-none;
+}
