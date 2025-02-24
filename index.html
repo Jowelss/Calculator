@@ -17,20 +17,29 @@
       class="p-1.5 rounded-sm shadow bg-[#fcfcff] text-neutral-900"
     >
       <div
-        class="show-container flex justify-around items-center h-[72px] mb-2 bg-white rounded-sm"
+        class="show-container flex justify-between px-1 items-center h-[72px] mb-2 bg-white rounded-sm shadow"
       >
-        <div class="min-w-[200px] max-w-[200px]" id="show"></div>
+        <div
+          id="show"
+          class="flex items-center min-w-[300px] max-w-[300px] h-full overflow-x-scroll whitespace-nowrap"
+        ></div>
 
-        <span class="fa-solid fa-equals cursor-pointer" id="result"></span>
+        <span
+          class="fa-solid fa-equals cursor-pointer px-1.5 overflow-x-auto"
+          id="result"
+        ></span>
 
-        <div id="show-result" class="min-w-[97px] max-w-[97px] text-end"></div>
+        <div
+          id="show-result"
+          class="flex items-center min-w-[200px] max-w-[200px] h-full overflow-x-scroll whitespace-nowrap"
+        ></div>
 
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
       <div class="flex gap-1 text-center">
         <div
-          class="number-container grid grid-cols-[100px_100px_100px] grid-rows-[100px_100px_100px_100px] gap-1"
+          class="number-container grid grid-cols-[160px_160px_160px] grid-rows-[80px_80px_80px_80px] gap-1"
         >
           <span class="number">1</span>
           <span class="number">2</span>
@@ -47,6 +56,8 @@
         </div>
 
         <div class="operator-container grid grid-cols-[100px] gap-1">
+          <span class="operator fa-solid fa-eraser" id="delete-all"></span>
+
           <span class="operator fa-solid fa-plus" id="sumar"></span>
 
           <span class="operator fa-solid fa-minus" id="restar"></span>

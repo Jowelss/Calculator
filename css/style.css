@@ -1,6 +1,28 @@
 @import "tailwindcss";
 
+#result,
 .number,
 .operator {
-  @apply place-content-center rounded-sm cursor-pointer select-none active:scale-94 duration-200 shadow bg-white;
+  @apply place-content-center rounded-sm cursor-pointer select-none active:scale-94 hover:bg-[#b9b9b925] duration-200 shadow bg-white;
+}
+
+#show,
+#show-result {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+  }
+
+  &::-webkit-sc rollbar-track {
+    background: #f1f1f1; /* Color del fondo del track */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888; /* Color del thumb */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color al pasar el ratón */
+  }
 }
