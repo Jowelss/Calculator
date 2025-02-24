@@ -11,12 +11,13 @@
     ></script>
   </head>
 
-  <body
-    class="h-screen flex justify-center items-center text-white text-4xl bg-gray-950"
-  >
-    <main id="main" class="p-0.5 rounded-xl border-4 border-[#100b25]">
+  <body class="h-screen flex justify-center items-center text-4xl bg-white">
+    <main
+      id="main"
+      class="p-1.5 rounded-sm shadow bg-[#fcfcff] text-neutral-900"
+    >
       <div
-        class="show-container flex justify-around items-center h-[72px] mb-0.5"
+        class="show-container flex justify-around items-center h-[72px] mb-2 bg-white rounded-sm"
       >
         <div class="min-w-[200px] max-w-[200px]" id="show"></div>
 
@@ -27,7 +28,7 @@
         <!-- <span id="error">Te falta agregar un valor númerico</span> -->
       </div>
 
-      <div class="flex gap-0.5 text-center">
+      <div class="flex gap-1 text-center">
         <div
           class="number-container grid grid-cols-[100px_100px_100px] grid-rows-[100px_100px_100px_100px] gap-1"
         >
@@ -45,7 +46,7 @@
           <span id="delete" class="number fa-solid fa-delete-left"></span>
         </div>
 
-        <div class="operator-container grid grid-cols-[100px] gap-0.5">
+        <div class="operator-container grid grid-cols-[100px] gap-1">
           <span class="operator fa-solid fa-plus" id="sumar"></span>
 
           <span class="operator fa-solid fa-minus" id="restar"></span>
