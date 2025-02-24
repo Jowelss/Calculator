@@ -30,6 +30,8 @@ calculator.addEventListener("click", (e) => {
 
     show.textContent += number;
 
+    show.scrollLeft = show.scrollWidth; //Para que el scroll este posicionado a la derecha
+
     // error.style.display = 'none';
   }
 
@@ -41,6 +43,8 @@ calculator.addEventListener("click", (e) => {
     // ESTO IF LO HICE DE SUERTE ASI QUE OJITO
     if (!isNaN(num)) {
       show.textContent += operator;
+
+      show.scrollLeft = show.scrollWidth; //Para que el scroll este posicionado a la derecha
     }
   }
 });
