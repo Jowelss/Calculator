@@ -15,6 +15,12 @@ calculator.addEventListener("click", (e) => {
     show.textContent = show.textContent.slice(0, -1);
   }
 
+  if (e.target.id === "delete-all") {
+    show.textContent = "";
+
+    showResult.textContent = "";
+  }
+
   if (e.target.id === "result") {
     const valueNull = show.textContent.slice(-1);
 
