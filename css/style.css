@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 #result,
+#delete-all,
 .number,
 .operator {
   @apply place-content-center rounded-sm cursor-pointer select-none active:scale-94 hover:bg-[#b9b9b925] duration-200 shadow bg-white;
