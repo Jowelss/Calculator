@@ -37,8 +37,6 @@ calculator.addEventListener("click", (e) => {
     show.textContent += number;
 
     show.scrollLeft = show.scrollWidth; //Para que el scroll este posicionado a la derecha
-
-    // error.style.display = 'none';
   }
 
   if (e.target.matches(".operator")) {
