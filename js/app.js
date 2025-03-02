@@ -3,6 +3,8 @@ const show = document.getElementById("show");
 const showResult = document.getElementById("show-result");
 const error = document.getElementById("error");
 
+const mode = document.getElementById("mode");
+
 const symbolOperator = {
   sumar: "+",
   restar: "-",
@@ -51,4 +53,9 @@ calculator.addEventListener("click", (e) => {
       show.scrollLeft = show.scrollWidth; //Para que el scroll este posicionado a la derecha
     }
   }
+});
+
+mode.addEventListener("click", () => {
+  mode.style.transition = "3s";
+  mode.style.right = "0";
 });
