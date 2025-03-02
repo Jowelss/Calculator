@@ -11,67 +11,71 @@
     ></script>
   </head>
 
-  <body
-    class="h-screen flex justify-center flex-col items-center text-4xl bg-white"
-  >
-    <header class="header w-[604px] flex justify-between mb-[60px]">
-      <i class="fa-solid fa-moon"></i>
-      <a class="fa-brands fa-github" href="https://github.com/Jowelss"></a>
+  <body class="">
+    <header class="header w-[604px] flex justify-between h-10 m-[10px_auto]">
+      <div class="w-20 relative">
+        <button
+          id="mode"
+          class="w-8 h-8 bg-amber-300 rounded-full absolute"
+        ></button>
+      </div>
     </header>
 
     <main
       id="main"
-      class="p-1.5 rounded-sm shadow bg-[#fcfcff] text-neutral-900"
+      class="h-[calc(100vh-40px)] flex justify-center flex-col items-center text-4xl bg-white"
     >
-      <div
-        class="show-container flex justify-between px-1 items-center h-[72px] mb-2 bg-white rounded-sm shadow"
-      >
+      <section class="p-1.5 rounded-sm shadow bg-[#fcfcff] text-neutral-900">
         <div
-          id="show"
-          class="flex items-center min-w-[300px] max-w-[300px] h-full overflow-x-scroll whitespace-nowrap"
-        ></div>
-
-        <span
-          class="fa-solid fa-equals cursor-pointer px-1.5 overflow-x-auto"
-          id="result"
-        ></span>
-
-        <div
-          id="show-result"
-          class="flex items-center min-w-[200px] max-w-[200px] h-full overflow-x-scroll whitespace-nowrap"
-        ></div>
-      </div>
-
-      <div class="flex gap-1 text-center">
-        <div
-          class="number-container grid grid-cols-[160px_160px_160px] grid-rows-[80px_80px_80px_80px] gap-1"
+          class="show-container flex justify-between px-1 items-center h-[72px] mb-2 bg-white rounded-sm shadow"
         >
-          <span class="number">1</span>
-          <span class="number">2</span>
-          <span class="number">3</span>
-          <span class="number">4</span>
-          <span class="number">5</span>
-          <span class="number">6</span>
-          <span class="number">7</span>
-          <span class="number">8</span>
-          <span class="number">9</span>
-          <span class="number">.</span>
-          <span class="number">0</span>
-          <span id="delete" class="number fa-solid fa-delete-left"></span>
+          <div
+            id="show"
+            class="flex items-center min-w-[300px] max-w-[300px] h-full overflow-x-scroll whitespace-nowrap"
+          ></div>
+
+          <span
+            class="fa-solid fa-equals cursor-pointer px-1.5 overflow-x-auto"
+            id="result"
+          ></span>
+
+          <div
+            id="show-result"
+            class="flex items-center min-w-[200px] max-w-[200px] h-full overflow-x-scroll whitespace-nowrap"
+          ></div>
         </div>
 
-        <div class="operator-container grid grid-cols-[100px] gap-1">
-          <span class="fa-solid fa-eraser" id="delete-all"></span>
+        <div class="flex gap-1 text-center">
+          <div
+            class="number-container grid grid-cols-[160px_160px_160px] grid-rows-[80px_80px_80px_80px] gap-1"
+          >
+            <span class="number">1</span>
+            <span class="number">2</span>
+            <span class="number">3</span>
+            <span class="number">4</span>
+            <span class="number">5</span>
+            <span class="number">6</span>
+            <span class="number">7</span>
+            <span class="number">8</span>
+            <span class="number">9</span>
+            <span class="number">.</span>
+            <span class="number">0</span>
+            <span id="delete" class="number fa-solid fa-delete-left"></span>
+          </div>
 
-          <span class="operator fa-solid fa-plus" id="sumar"></span>
+          <div class="operator-container grid grid-cols-[100px] gap-1">
+            <span class="fa-solid fa-eraser" id="delete-all"></span>
 
-          <span class="operator fa-solid fa-minus" id="restar"></span>
+            <span class="operator fa-solid fa-plus" id="sumar"></span>
 
-          <span class="operator fa-solid fa-xmark" id="multiplicar"></span>
+            <span class="operator fa-solid fa-minus" id="restar"></span>
 
-          <span class="operator fa-solid fa-divide" id="dividir"></span>
+            <span class="operator fa-solid fa-xmark" id="multiplicar"></span>
+
+            <span class="operator fa-solid fa-divide" id="dividir"></span>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <script src="./js/app.js"></script>
   </body>
