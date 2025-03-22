@@ -55,7 +55,4 @@ calculator.addEventListener("click", (e) => {
   }
 });
 
-mode.addEventListener("click", () => {
-  mode.style.transition = "3s";
-  mode.style.right = "0";
-});
+//DELETE EVENT BUTTON DARK - LIGHT
